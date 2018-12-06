@@ -1,0 +1,42 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+<p>
+ <input type="text" name="search"  id="search">
+ <button id="searchclick">Wyszukaj</button> 
+</p>
+<h1 class="drinkheader">Drinki dla wszystkich</h1>
+ <div class="row">
+	{% for drink in object_list %}
+	{% if not drink.specjalny %}
+	<div class="col-sm-4 drinkphotocontent searchmodule">
+	<h1>{{drink.nazwa}}</h1>
+	<a href="/drinklist/{{drink.id}}"><img class="drinkphoto" src="{{drink.zdjecie.url}}"></a>
+	
+	<a href="/drinklist/{{drink.id}}">Więcej</a>
+	</div>
+	{%endif%}
+	{% endfor %}
+</div> 
+
+<h1 class="drinkheader">Drinki specjalne</h1>
+{% if user.is_authenticated %}
+		 <div class="row">
+			{% for drink in object_list %}
+			{% if drink.specjalny %}
+			<div class="col-sm-4 drinkphotocontent searchmodule">
+			<h1>{{drink.nazwa}}</h1>
+			<a href="/drinklist/{{drink.id}}"><img class="drinkphoto" src="{{drink.zdjecie.url}}"></a>
+			
+			<a href="/drinklist/{{drink.id}}">Więcej</a>
+			</div>
+			{% endif %}
+			{% endfor %}
+		 </div> 
+{% else %}
+<p>Treść widoczna tylko dla zalogowanych użytkowników</p>
+{% endif %}
+
+
+{% endblock %}

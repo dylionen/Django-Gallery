@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+{% block content %}
+
+
+<html>
+  <body class="message">
+    <p>Zrejestruj się</p> 
+       {% if user.is_authenticated %}
+        <form action="/contact/" method="POST" >
+        {% csrf_token %}
+        <div class=" contact-tt">
+          <p>Temat</p>
+          <input type="text" name="title" class="form-control contact-form-tt" ><br>
+          <p>Mail</p>
+          <input type="text" name="mail" class="form-control contact-form-tt" ><br>
+          <p>Opis</p>
+	        <textarea name="text" cols="x" rows="y" class="form-control contact-form-tt"></textarea><br>
+          <input type="submit" value="Wyślij" class="btn btn-success contact-submit-tt">
+          </div>
+         </form>
+    {% else %}
+    
+    <a>Musisz się zalogować aby napisać wiadomość do Administratora</a>
+    {% endif %}
+  </body>
+</html>
+{% endblock %}

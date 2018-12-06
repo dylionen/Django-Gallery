@@ -1,0 +1,123 @@
+body{
+	background-image: url("img/background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-color: #222222;
+}
+p {
+text-align: center;
+color: white;
+font-size: 40px;
+background: rgba(220, 170, 120, 0.6);
+}
+
+p input{
+color:black;
+}
+.logo{
+	width:40px;
+	height:30px;
+}
+.drinkphoto{
+width:300px;
+height:250px;
+margin:0 auto;
+}
+
+.carousel-inner > .item > img {
+  width:400px;
+  height:300px;
+  margin: auto;
+background-position: center center;
+}
+
+.drinkphotocontent{
+background-color:grey;
+border:2px solid black;
+width:330px;
+height:400px;
+margin:5px;
+}
+.drinkphotocontent h1{
+text-align:center;
+}
+
+.activelogin{
+color:#33CC33;
+display:inline;
+}
+
+.drinkheader{
+text-align:center;
+text-transform: uppercase;
+letter-spacing: 3px;
+text-shadow: 3px 2px red;
+
+}
+
+
+.register{
+margin:0 auto;
+text-align:center;
+}
+
+
+.hiddeninput{
+display: none;
+}
+
+
+.commentsection{
+margin:0 auto;
+text-align:center;
+}
+
+.comment{
+margin:0 auto;
+width:300px;
+height:80px;
+padding-top:5px;
+background-color:grey;
+border:2px solid black;
+
+}
+.drink-zdjecie-tt {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid brown;
+  width: 500px;
+}
+.drink-sklad-tt>h2 {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  text-shadow: 2px 2px red;  
+}
+.drink-sklad-tt>p , .contact-tt>p {
+  color:yellow;
+  background: none;
+  text-shadow: 2px 2px 2px  red, -2px -2px 2px  red ;
+  font-size: 20px;
+}
+.drink-form-tt , .contact-form-tt{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.drink-b-tt{
+  color: black;
+   text-shadow: 2px 2px 2px  white ;
+    font-size: 20px;
+}
+.drink-coment-tt{
+   max-width: 800px;
+     margin: 0px auto 20px auto;
+     text-align:left;
+     background-color: azure;
+     border-radius: 3px;
+     padding: 5px 10px;
+}
+.contact-submit-tt{
+  display:block;
+  margin: 0 auto;
+}

@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+{% block content %}
+
+<h1>Nieprzeczytane</h1>
+{% for w in wiadomosci %}
+{% if not w.read %}
+<ul>
+<li>{{w.author}}</li>
+<li>{{w.title}}</li>
+<li>{{w.mail}}</li>
+<li>{{w.text}}</li>
+
+<!--
+        <form action="/contact/" method="POST">
+	    	{% csrf_token %}
+	    	<input type="number" name="id" value="{{w.id}}" class="hiddeninput">
+	        <input type="text" name="title" value="{{w.title}}" class="hiddeninput">
+	        <input type="text" name="mail" value="{{w.mail}}" class="hiddeninput">
+	        <input type="text" name="text" cols="x" rows="y" value="{{w.text}}" class="hiddeninput">
+	        <input type="checkbox" name="read" checked class="hiddeninput">
+	        <input type="submit" value="Przeczytane">
+         </form>
+         -->
+
+</ul>
+{% endif %}
+
+{% endfor %}
+
+<h1>Przeczytane</h1>
+{% for w in wiadomosci %}
+{% if w.read %}
+<ul>
+<li>{{w.author}}</li>
+<li>{{w.title}}</li>
+<li>{{w.mail}}</li>
+<li>{{w.text}}</li>
+
+</ul>
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}
